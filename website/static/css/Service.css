@@ -1,0 +1,25 @@
+* {
+	box-sizing: border-box;
+}
+
+.column {
+	float: left;
+	width: 33.33%;
+	padding: 5px;
+}
+
+.row::after {
+	content: "";
+	display: table;
+	clear: both;
+}
+
+h1{
+    border: 2px solid rgb(60, 60, 60);
+    background-color:rgb(240, 240, 240);
+    color:rgb(90, 150, 130);
+    text-align: center;
+}
+
+
+

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+{% load static %}
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Navigation Bar</title>
+    <link rel="stylesheet" href="{% static 'css/nav.css' %}">
+</head>
+<body>
+<nav class="navbar">
+    <div class="navdiv">
+        <div class="logo"><a href="/">
+            <img src="{% static 'image/LOGO.png' %}" alt="My image">
+        </a>
+        </div>
+        <ul>
+            <li><a href="/read">Leads</a></li>
+            <button class="info" onclick="document.location='/logout'">LOGOUT</button>
+        </ul>
+    </div>
+    <hr>
+</nav>
+</body>
+{% block content %}
+{% endblock %}
+</html>

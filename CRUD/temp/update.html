@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+{% extends 'crudbar.html' %}
+{% block content %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Update</title>
+    <style>
+input[type=text] {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  box-sizing: border-box;
+}
+input[type=submit]{
+  background-color: rgb(128, 154, 199);
+  border: none;
+  border-radius: 8px;
+  color: Black;
+  padding: 16px 32px;
+  text-decoration: none;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+.box {
+  border: 1px solid green;
+  background-color:rgb(240, 240, 240);
+  height: 100%;
+}
+    </style>
+</head>
+<body>
+<form action="/update/{{ data.pk }}" method="POST">
+    {% csrf_token %}
+<div class="box">
+    <ul>
+        <li>ID:      <input type="text" value="{{ data.id }}" name="id"></li><br>
+        <li>Name:    <input type="text" value="{{ data.name }}" name="name"></li><br>
+        <li>Email:   <input type="text" value="{{ data.email }}" name="email"></li><br>
+        <li>Contact: <input type="text" value="{{ data.contact }}" name="contact"></li><br>
+        <li>Subject: <input type="text" value="{{ data.subject }}" name="subject"></li><br>
+        <li>Status:  <input type="text" value="{{ data.status }}" name="status"></li><br>
+        <li>Comment: <input type="text" value="{{ data.comment }}" name="comment"></li><br>
+        <li><input type="submit" value="Update"></li>
+    </ul>
+</div>
+</form>
+</body>
+{% endblock content %}
+</html>
