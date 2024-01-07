@@ -2,7 +2,7 @@
     text-decoration: none;
     }
 .navbar{
-		background:white;
+        background:rgb(52, 17, 17);
 		font-family: calibri;
 		padding-right: 15px;
 		padding-left: 15px;
@@ -11,6 +11,7 @@
 		display: flex;
 		align-items: center;
 		justify-content: space-between;
+
 		}
 .logo img{
 		width: 126px;
@@ -28,7 +29,7 @@ li a{
 		margin-right: 20px;
 		}
 button{
-		background-color: blue;
+		background-color: black;
 		color:white;
 		margin-left: 10px;
 		padding: 10px;
