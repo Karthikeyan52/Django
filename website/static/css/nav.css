@@ -1,12 +1,7 @@
 *{
     text-decoration: none;
     }
-.navbar{
-        background:rgb(52, 17, 17);
-		font-family: calibri;
-		padding-right: 15px;
-		padding-left: 15px;
-		}
+.navbar{}
 .navdiv{
 		display: flex;
 		align-items: center;
