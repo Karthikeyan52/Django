@@ -1,7 +1,12 @@
 *{
     text-decoration: none;
     }
-.navbar{}
+.navbar{
+		background:white;
+		font-family: calibri;
+		padding-right: 15px;
+		padding-left: 15px;
+		}
 .navdiv{
 		display: flex;
 		align-items: center;
