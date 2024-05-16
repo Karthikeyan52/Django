@@ -8,7 +8,6 @@
     <title>Content</title>
     <link rel="stylesheet" href="{% static 'css/Style.css' %}">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <script src="{% static 'js/Style.js' %}"></script>
     <style>
         .mySlides {display: none}
         img {vertical-align: middle;}
@@ -159,7 +158,34 @@
     <span class="dot" onclick="currentSlide(3)"></span>
     <span class="dot" onclick="currentSlide(4)"></span>
 </div>
-<script src="{% static 'js/Style.js' %}"></script>
+<script>
+    let slideIndex = 1;
+     showSlides(slideIndex);
+
+     function plusSlides(n) {
+       showSlides(slideIndex += n);
+     }
+
+     function currentSlide(n) {
+       showSlides(slideIndex = n);
+     }
+
+     function showSlides(n) {
+       let i;
+       let slides = document.getElementsByClassName("mySlides");
+       let dots = document.getElementsByClassName("dot");
+       if (n > slides.length) {slideIndex = 1}
+       if (n < 1) {slideIndex = slides.length}
+       for (i = 0; i < slides.length; i++) {
+         slides[i].style.display = "none";
+       }
+       for (i = 0; i < dots.length; i++) {
+         dots[i].className = dots[i].className.replace(" active", "");
+       }
+       slides[slideIndex-1].style.display = "block";
+       dots[slideIndex-1].className += " active";
+     }
+</script>
 </body>
 {% endblock %}
 </html>

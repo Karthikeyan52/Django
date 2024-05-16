@@ -1,21 +1,83 @@
 <!DOCTYPE html>
-<html lang="en">
+{% extends 'navbar.html' %}
+{% block content %}
+{% load static %}
+<html>
 <head>
-    <meta charset="UTF-8">
-    <style>.google-map {
-     padding-bottom: 50%;
-     position: relative;
-}
+    <style>
 
-.google-map iframe {
-     height: 50%;
-     width: 50%;
-     left: 0;
-     top: 0;
-     position: absolute;
-}</style>
+        .gap { display:inline-block;
+    padding:10px 10px 10px 10px;
+    heigth:50px;
+    width:500px;
+    border: 3px outset black;
+     font-size:20px;
+     margin-left:100px;
+     background-color:tomato;
+        }
+        .table { display:inline-block;
+    padding:10px 10px 10px 10px;
+    heigth:50px;
+    width:500px;
+    border: 3px outset black;
+     font-size:20px;
+     margin-left:100px;
+     background-color:tomato;
+        }
+        pre{font-family:verdana;
+        color:black;}
+        input{ padding:6px;}
+        input:hover{background-color:black;
+        color:tomato;}
+
+         .footer {
+    font-size:30px;
+    margin-top:50px;
+  background-color: #777;
+  padding: 70px;
+  text-align: center;
+  color: white;}
+
+
+    </style>
 </head>
 <body>
-<div class="google-map">
-    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15548.776088720715!2d80.2209766!3d13.023313199999999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a5267a7bc362381%3A0xcbeba30e5110014a!2sTNGF%20Cosmo%20Golf%20Club!5e0!3m2!1sen!2sin!4v1702816754941!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe></div></body>
+<div class="gap">
+        <form method="POST" action="">
+            {% csrf_token %}
+            <pre>
+            <b>Make an Enquiry</b><br>
+            Name    <input type="text" name="name"><br>
+            Email     <input type="text" name="email"><br>
+            Contact  <input type="text" name="contact"><br>
+            Subject  <input type="text" name="subject"><br>
+            Message <input type="text" name="message"><br>
+            <input type="submit" value="submit" width="50px">
+             </pre>
+        </form>
+
+    </div>
+
+    <div class="table">
+        <pre>
+        <b>Connect with Us</b><br>
+        <b>Lane</b>
+            No11,jn main road,
+            Thiruvallur.<br>
+        <b>Contact</b>
+            9940018221<br>
+        <b>Email</b>
+            Birdfoundation@gmail.com
+            </pre>
+    </div>
+<div class="footer">
+    <h4>Connect With Us</h4>
+    <p>No:02,Jn Road,
+        Thiruvallur.
+        9940018221.
+        Birdfoundation@gmail.com
+    </p>
+</div>
+</body>
+{% endblock content %}
 </html>
